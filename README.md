@@ -94,7 +94,7 @@ for _, hEntry := range history {
 
 Methods below require authentication tokens.
 
-Get user info and assets:
+### Get user info and assets:
 
 ```golang
 access_key := "nkfjhwkfhwkrughrekguhekug"
@@ -106,7 +106,7 @@ for _, account := range userInfo.Accounts {
 }
 ```
 
-Get list of currently opened user orders:
+### Get list of currently opened user orders:
 
 ```golang
 access_key := "nkfjhwkfhwkrughrekguhekug"
@@ -118,7 +118,7 @@ for _, order := range orders {
 }
 ```
 
-Get history of user trades:
+### Get history of user trades:
 
 ```golang
 access_key := "nkfjhwkfhwkrughrekguhekug"
@@ -130,7 +130,7 @@ for _, deal := range trades {
 }
 ```
 
-Create new order:
+### Create new order:
 
 ```golang
 access_key := "nkfjhwkfhwkrughrekguhekug"
@@ -143,7 +143,7 @@ order, err := kunaio.NewOrder(access_key, secret_key, side, volume, price)
 fmt.Printf("Order created: %+v\n", order)
 ```
 
-Delete existing order:
+### Delete existing order:
 
 ```golang
 access_key := "nkfjhwkfhwkrughrekguhekug"
@@ -153,5 +153,3 @@ order, err := kunaio.CancelOrder(access_key, secret_key, orderID)
 fmt.Printf("Order removed: %+v\n", order)
 ```
 
------------------------------------------------------------------
-Aleksey Morarash <tuxofil@gmail.com>, 2017
