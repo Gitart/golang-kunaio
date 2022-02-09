@@ -16,8 +16,7 @@ https://opensource.org/licenses/BSD-2-Clause or in LICENSE file
 in the sources tree.
 
 ## Donate
-
-Bitcoin: 1PtgmrQzYNqTCLzGwVc9wVvYFpUU9Esftu
+Bitcoin: 
 
 ## Documentation
 
