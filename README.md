@@ -48,26 +48,26 @@ import (
 
 ### Public methods
 
-List market types supported by the library:
+### List market types supported by the library:
 
 ```golang
 markets := kunaio.SupportedMarkets()
 ```
 
-Get kuna.io server time:
+### Get kuna.io server time:
 
 ```golang
 t, err := kunaio.GetServerTime()
 ```
 
-Get latest market stats:
+### Get latest market stats:
 
 ```golang
 market := "btcuah"
 stats, err := kunaio.GetLatestStats(market)
 ```
 
-Get order book:
+### Get order book:
 
 ```golang
 market := "btcuah"
@@ -80,7 +80,7 @@ for _, order := range obook.Asks {
 }
 ```
 
-Get trade history:
+### Get trade history:
 
 ```golang
 market := "btcuah"
