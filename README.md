@@ -96,9 +96,11 @@ Methods below require authentication tokens.
 ### Get user info and assets:
 
 ```golang
-access_key := "nkfjhwkfhwkrughrekguhekug"
-secret_key := "eo328u3bkfbgfu6gdugsyu36t"
-userInfo, err := kunaio.GetUserInfo(access_key, secret_key)
+
+access_key     := "nkfjhwkfhwkrughrekguhekug"
+secret_key     := "eo328u3bkfbgfu6gdugsyu36t"
+userInfo, err  := kunaio.GetUserInfo(access_key, secret_key)
+
 for _, account := range userInfo.Accounts {
     fmt.Printf("Currency: %s; Balance: %f; Locked: %f\n",
         account.Currency, account.Balance, account.Locked)
@@ -110,7 +112,8 @@ for _, account := range userInfo.Accounts {
 ```golang
 access_key := "nkfjhwkfhwkrughrekguhekug"
 secret_key := "eo328u3bkfbgfu6gdugsyu36t"
-market := "btcuah"
+market     := "btcuah"
+
 orders, err := kunaio.GetUserOrders(access_key, secret_key, market)
 for _, order := range orders {
     ...
@@ -122,8 +125,10 @@ for _, order := range orders {
 ```golang
 access_key := "nkfjhwkfhwkrughrekguhekug"
 secret_key := "eo328u3bkfbgfu6gdugsyu36t"
-market := "btcuah"
+market     := "btcuah"
+
 orders, err := kunaio.GetUserTrades(access_key, secret_key, market)
+
 for _, deal := range trades {
     ...
 }
@@ -134,10 +139,11 @@ for _, deal := range trades {
 ```golang
 access_key := "nkfjhwkfhwkrughrekguhekug"
 secret_key := "eo328u3bkfbgfu6gdugsyu36t"
-market := "btcuah"
-side := "buy"
-volume := 0.12345 // bitcoins
-price := 100000 // UAH per 1 bitcoin
+market     := "btcuah"
+side       := "buy"
+volume     := 0.12345 // bitcoins
+price      := 100000 // UAH per 1 bitcoin
+
 order, err := kunaio.NewOrder(access_key, secret_key, side, volume, price)
 fmt.Printf("Order created: %+v\n", order)
 ```
@@ -147,7 +153,7 @@ fmt.Printf("Order created: %+v\n", order)
 ```golang
 access_key := "nkfjhwkfhwkrughrekguhekug"
 secret_key := "eo328u3bkfbgfu6gdugsyu36t"
-orderID := 555111
+orderID    := 555111
 order, err := kunaio.CancelOrder(access_key, secret_key, orderID)
 fmt.Printf("Order removed: %+v\n", order)
 ```
